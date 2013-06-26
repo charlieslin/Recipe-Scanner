@@ -1,0 +1,483 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C59826D2177AA65500C9D576 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59826D1177AA65500C9D576 /* Foundation.framework */; };
+		C59826D4177AA65500C9D576 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59826D3177AA65500C9D576 /* CoreGraphics.framework */; };
+		C59826D6177AA65500C9D576 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59826D5177AA65500C9D576 /* UIKit.framework */; };
+		C59826DC177AA65500C9D576 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C59826DA177AA65500C9D576 /* InfoPlist.strings */; };
+		C59826DE177AA65500C9D576 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C59826DD177AA65500C9D576 /* main.m */; };
+		C59826E2177AA65500C9D576 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C59826E1177AA65500C9D576 /* AppDelegate.m */; };
+		C59826E5177AA65500C9D576 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C59826E3177AA65500C9D576 /* Main_iPhone.storyboard */; };
+		C59826E8177AA65500C9D576 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C59826E6177AA65500C9D576 /* Main_iPad.storyboard */; };
+		C59826EB177AA65500C9D576 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C59826EA177AA65500C9D576 /* ViewController.m */; };
+		C59826ED177AA65500C9D576 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C59826EC177AA65500C9D576 /* Images.xcassets */; };
+		C59826F4177AA65500C9D576 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59826F3177AA65500C9D576 /* XCTest.framework */; };
+		C59826F5177AA65500C9D576 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59826D1177AA65500C9D576 /* Foundation.framework */; };
+		C59826F6177AA65500C9D576 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59826D5177AA65500C9D576 /* UIKit.framework */; };
+		C59826FE177AA65500C9D576 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C59826FC177AA65500C9D576 /* InfoPlist.strings */; };
+		C5982700177AA65500C9D576 /* Recipe_ScannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C59826FF177AA65500C9D576 /* Recipe_ScannerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C59826F7177AA65500C9D576 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C59826C6177AA65500C9D576 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C59826CD177AA65500C9D576;
+			remoteInfo = "Recipe Scanner";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C59826CE177AA65500C9D576 /* Recipe Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recipe Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C59826D1177AA65500C9D576 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C59826D3177AA65500C9D576 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C59826D5177AA65500C9D576 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C59826D9177AA65500C9D576 /* Recipe Scanner-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Recipe Scanner-Info.plist"; sourceTree = "<group>"; };
+		C59826DB177AA65500C9D576 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C59826DD177AA65500C9D576 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C59826DF177AA65500C9D576 /* Recipe Scanner-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Recipe Scanner-Prefix.pch"; sourceTree = "<group>"; };
+		C59826E0177AA65500C9D576 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C59826E1177AA65500C9D576 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C59826E4177AA65500C9D576 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		C59826E7177AA65500C9D576 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		C59826E9177AA65500C9D576 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C59826EA177AA65500C9D576 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C59826EC177AA65500C9D576 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C59826F2177AA65500C9D576 /* Recipe ScannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Recipe ScannerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C59826F3177AA65500C9D576 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C59826FB177AA65500C9D576 /* Recipe ScannerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Recipe ScannerTests-Info.plist"; sourceTree = "<group>"; };
+		C59826FD177AA65500C9D576 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C59826FF177AA65500C9D576 /* Recipe_ScannerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Recipe_ScannerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C59826CB177AA65500C9D576 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C59826D4177AA65500C9D576 /* CoreGraphics.framework in Frameworks */,
+				C59826D6177AA65500C9D576 /* UIKit.framework in Frameworks */,
+				C59826D2177AA65500C9D576 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C59826EF177AA65500C9D576 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C59826F4177AA65500C9D576 /* XCTest.framework in Frameworks */,
+				C59826F6177AA65500C9D576 /* UIKit.framework in Frameworks */,
+				C59826F5177AA65500C9D576 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C59826C5177AA65500C9D576 = {
+			isa = PBXGroup;
+			children = (
+				C59826D7177AA65500C9D576 /* Recipe Scanner */,
+				C59826F9177AA65500C9D576 /* Recipe ScannerTests */,
+				C59826D0177AA65500C9D576 /* Frameworks */,
+				C59826CF177AA65500C9D576 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C59826CF177AA65500C9D576 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C59826CE177AA65500C9D576 /* Recipe Scanner.app */,
+				C59826F2177AA65500C9D576 /* Recipe ScannerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C59826D0177AA65500C9D576 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C59826D1177AA65500C9D576 /* Foundation.framework */,
+				C59826D3177AA65500C9D576 /* CoreGraphics.framework */,
+				C59826D5177AA65500C9D576 /* UIKit.framework */,
+				C59826F3177AA65500C9D576 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C59826D7177AA65500C9D576 /* Recipe Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				C59826E0177AA65500C9D576 /* AppDelegate.h */,
+				C59826E1177AA65500C9D576 /* AppDelegate.m */,
+				C59826E3177AA65500C9D576 /* Main_iPhone.storyboard */,
+				C59826E6177AA65500C9D576 /* Main_iPad.storyboard */,
+				C59826E9177AA65500C9D576 /* ViewController.h */,
+				C59826EA177AA65500C9D576 /* ViewController.m */,
+				C59826EC177AA65500C9D576 /* Images.xcassets */,
+				C59826D8177AA65500C9D576 /* Supporting Files */,
+			);
+			path = "Recipe Scanner";
+			sourceTree = "<group>";
+		};
+		C59826D8177AA65500C9D576 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C59826D9177AA65500C9D576 /* Recipe Scanner-Info.plist */,
+				C59826DA177AA65500C9D576 /* InfoPlist.strings */,
+				C59826DD177AA65500C9D576 /* main.m */,
+				C59826DF177AA65500C9D576 /* Recipe Scanner-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C59826F9177AA65500C9D576 /* Recipe ScannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				C59826FF177AA65500C9D576 /* Recipe_ScannerTests.m */,
+				C59826FA177AA65500C9D576 /* Supporting Files */,
+			);
+			path = "Recipe ScannerTests";
+			sourceTree = "<group>";
+		};
+		C59826FA177AA65500C9D576 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C59826FB177AA65500C9D576 /* Recipe ScannerTests-Info.plist */,
+				C59826FC177AA65500C9D576 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C59826CD177AA65500C9D576 /* Recipe Scanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5982703177AA65500C9D576 /* Build configuration list for PBXNativeTarget "Recipe Scanner" */;
+			buildPhases = (
+				C59826CA177AA65500C9D576 /* Sources */,
+				C59826CB177AA65500C9D576 /* Frameworks */,
+				C59826CC177AA65500C9D576 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Recipe Scanner";
+			productName = "Recipe Scanner";
+			productReference = C59826CE177AA65500C9D576 /* Recipe Scanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C59826F1177AA65500C9D576 /* Recipe ScannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5982706177AA65500C9D576 /* Build configuration list for PBXNativeTarget "Recipe ScannerTests" */;
+			buildPhases = (
+				C59826EE177AA65500C9D576 /* Sources */,
+				C59826EF177AA65500C9D576 /* Frameworks */,
+				C59826F0177AA65500C9D576 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C59826F8177AA65500C9D576 /* PBXTargetDependency */,
+			);
+			name = "Recipe ScannerTests";
+			productName = "Recipe ScannerTests";
+			productReference = C59826F2177AA65500C9D576 /* Recipe ScannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C59826C6177AA65500C9D576 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Charlie Lin";
+				TargetAttributes = {
+					C59826F1177AA65500C9D576 = {
+						TestTargetID = C59826CD177AA65500C9D576;
+					};
+				};
+			};
+			buildConfigurationList = C59826C9177AA65500C9D576 /* Build configuration list for PBXProject "Recipe Scanner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C59826C5177AA65500C9D576;
+			productRefGroup = C59826CF177AA65500C9D576 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C59826CD177AA65500C9D576 /* Recipe Scanner */,
+				C59826F1177AA65500C9D576 /* Recipe ScannerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C59826CC177AA65500C9D576 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C59826E8177AA65500C9D576 /* Main_iPad.storyboard in Resources */,
+				C59826ED177AA65500C9D576 /* Images.xcassets in Resources */,
+				C59826E5177AA65500C9D576 /* Main_iPhone.storyboard in Resources */,
+				C59826DC177AA65500C9D576 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C59826F0177AA65500C9D576 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C59826FE177AA65500C9D576 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C59826CA177AA65500C9D576 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C59826EB177AA65500C9D576 /* ViewController.m in Sources */,
+				C59826E2177AA65500C9D576 /* AppDelegate.m in Sources */,
+				C59826DE177AA65500C9D576 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C59826EE177AA65500C9D576 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5982700177AA65500C9D576 /* Recipe_ScannerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C59826F8177AA65500C9D576 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C59826CD177AA65500C9D576 /* Recipe Scanner */;
+			targetProxy = C59826F7177AA65500C9D576 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C59826DA177AA65500C9D576 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C59826DB177AA65500C9D576 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C59826E3177AA65500C9D576 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C59826E4177AA65500C9D576 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		C59826E6177AA65500C9D576 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C59826E7177AA65500C9D576 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		C59826FC177AA65500C9D576 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C59826FD177AA65500C9D576 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C5982701177AA65500C9D576 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C5982702177AA65500C9D576 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C5982704177AA65500C9D576 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Recipe Scanner/Recipe Scanner-Prefix.pch";
+				INFOPLIST_FILE = "Recipe Scanner/Recipe Scanner-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C5982705177AA65500C9D576 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Recipe Scanner/Recipe Scanner-Prefix.pch";
+				INFOPLIST_FILE = "Recipe Scanner/Recipe Scanner-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C5982707177AA65500C9D576 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Recipe Scanner.app/Recipe Scanner";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Xcode5-DP2.app/Contents/Developer/Library/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Recipe Scanner/Recipe Scanner-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Recipe ScannerTests/Recipe ScannerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C5982708177AA65500C9D576 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Recipe Scanner.app/Recipe Scanner";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Xcode5-DP2.app/Contents/Developer/Library/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Recipe Scanner/Recipe Scanner-Prefix.pch";
+				INFOPLIST_FILE = "Recipe ScannerTests/Recipe ScannerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C59826C9177AA65500C9D576 /* Build configuration list for PBXProject "Recipe Scanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5982701177AA65500C9D576 /* Debug */,
+				C5982702177AA65500C9D576 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5982703177AA65500C9D576 /* Build configuration list for PBXNativeTarget "Recipe Scanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5982704177AA65500C9D576 /* Debug */,
+				C5982705177AA65500C9D576 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C5982706177AA65500C9D576 /* Build configuration list for PBXNativeTarget "Recipe ScannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5982707177AA65500C9D576 /* Debug */,
+				C5982708177AA65500C9D576 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C59826C6177AA65500C9D576 /* Project object */;
+}
