@@ -7,7 +7,28 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <AssetsLibrary/AssetsLibrary.h>
+#import "Tesseract.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+{
+    UIImageView *capturedImage;
+}
+
+@property (strong, nonatomic) IBOutlet UIImageView* capturedImage;
+
+- (IBAction)startCamera:(id)sender;
+
+-(void)showActionSheet:(UIActionSheet*) actionSheet;
+
+-(BOOL) startCameraControllerFromViewController: (UIViewController*) controller
+                                  usingDelegate: (id <UIImagePickerControllerDelegate,
+                                                  UINavigationControllerDelegate>) delegate sourceType:(UIImagePickerControllerSourceType)sourceType;
+
+-(void) imagePickerControllerDidCancel: (UIImagePickerController *) picker;
+
+-(void) imagePickerController: (UIImagePickerController *) picker didFinishPickingMediaWithInfo: (NSDictionary *) info;
 
 @end
