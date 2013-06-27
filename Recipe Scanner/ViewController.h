@@ -11,12 +11,15 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "Tesseract.h"
 #import <MobileCoreServices/MobileCoreServices.h>
+#import "GPUImage.h"
 
 @interface ViewController : UIViewController <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 {
     UIImageView *capturedImage;
+    UITextView *ocrText;
 }
 
+@property (strong, nonatomic) IBOutlet UITextView *ocrText;
 @property (strong, nonatomic) IBOutlet UIImageView* capturedImage;
 
 - (IBAction)startCamera:(id)sender;

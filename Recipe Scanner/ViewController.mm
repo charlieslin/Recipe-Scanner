@@ -18,6 +18,7 @@ using namespace cv;
 @implementation ViewController
 
 @synthesize capturedImage;
+@synthesize ocrText;
 
 - (void)viewDidLoad
 {
@@ -29,7 +30,7 @@ using namespace cv;
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    self.capturedImage = nil;
+    
     // Dispose of any resources that can be recreated.
 }
 
@@ -91,44 +92,68 @@ using namespace cv;
 // For responding to the user accepting a newly-captured picture or movie
 - (void) imagePickerController: (UIImagePickerController *) picker
  didFinishPickingMediaWithInfo: (NSDictionary *) info {
-    
-    NSLog(@"finished capturing");
-    
-    NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
-    UIImage *originalImage, *editedImage, *imageToSave;
-
-    Tesseract* tesseract = [[Tesseract alloc] initWithDataPath:@"tessdata" language:@"eng"];
-    //[tesseract setVariableValue:@"0123456789" forKey:@"tessedit_char_whitelist"];
-    
-    // Handle a still image capture
-    if (CFStringCompare ((__bridge CFStringRef) mediaType, kUTTypeImage, 0)
-        == kCFCompareEqualTo) {
+    [picker dismissViewControllerAnimated:YES completion:^void {
+        NSLog(@"finished capturing");
         
-        editedImage = (UIImage *) [info objectForKey:
-                                   UIImagePickerControllerEditedImage];
-        originalImage = (UIImage *) [info objectForKey:
-                                     UIImagePickerControllerOriginalImage];
+        NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
+        UIImage *originalImage, *editedImage, *imageToSave;
         
-        if (editedImage) {
-            imageToSave = editedImage;
-        } else {
-            imageToSave = originalImage;
+        
+        
+        Tesseract* tesseract = [[Tesseract alloc] initWithDataPath:@"tessdata" language:@"eng"];
+        //[tesseract setVariableValue:@"0123456789" forKey:@"tessedit_char_whitelist"];
+        
+        // Handle a still image capture
+        if (CFStringCompare ((__bridge CFStringRef) mediaType, kUTTypeImage, 0)
+            == kCFCompareEqualTo) {
+            
+            editedImage = (UIImage *) [info objectForKey:
+                                       UIImagePickerControllerEditedImage];
+            originalImage = (UIImage *) [info objectForKey:
+                                         UIImagePickerControllerOriginalImage];
+            
+            if (editedImage) {
+                imageToSave = editedImage;
+            } else {
+                imageToSave = originalImage;
+            }
+            
+            if(picker.sourceType == UIImagePickerControllerSourceTypeCamera)  {
+                // Save the new image (original or edited) to the Camera Roll
+                //UIImageWriteToSavedPhotosAlbum (imageToSave, nil, nil , nil);
+            }
         }
         
-        if(picker.sourceType == UIImagePickerControllerSourceTypeCamera)  {
-            // Save the new image (original or edited) to the Camera Roll
-            //UIImageWriteToSavedPhotosAlbum (imageToSave, nil, nil , nil);
-        }
-    }
-    
-    [self.capturedImage setImage:imageToSave];
-    [tesseract setImage:[UIImage imageNamed:@"image_sample.jpg"]];
-    [tesseract recognize];
-    
-    NSLog(@"%@", [tesseract recognizedText]);
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
+        //[self.capturedImage setImage:imageToSave];
+        
+        GPUImagePicture *stillImageSource = [[GPUImagePicture alloc] initWithImage:imageToSave];
+        //GPUImageLuminanceThresholdFilter *stillImageFilter = [[GPUImageLuminanceThresholdFilter alloc] init];
+        GPUImageAdaptiveThresholdFilter *stillImageFilter = [[GPUImageAdaptiveThresholdFilter alloc] init];
+        //stillImageFilter.threshold = 0.5;
+        stillImageFilter.blurSize = 0.5;
+        [stillImageSource addTarget:stillImageFilter];
+        [stillImageSource processImage];
+        
+        UIImage *imageWithAppliedThreshold = [stillImageFilter imageFromCurrentlyProcessedOutput];
+        
+        [self.capturedImage setImage: imageWithAppliedThreshold];
+        
+        [tesseract setImage:imageWithAppliedThreshold];
+        [tesseract recognize];
+        
+        NSLog(@"%@", [tesseract recognizedText]);
+        
+        [self.ocrText setText:[tesseract recognizedText]];
+        
+        
+        //
+ 
+    }];
     picker = nil;
+    
+        
+    
+    
 }
 
 
