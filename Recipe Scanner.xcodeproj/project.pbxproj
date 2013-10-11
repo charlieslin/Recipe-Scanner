@@ -24,6 +24,8 @@
 		C5982700177AA65500C9D576 /* Recipe_ScannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C59826FF177AA65500C9D576 /* Recipe_ScannerTests.m */; };
 		C598270A177AA67D00C9D576 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5982709177AA67D00C9D576 /* opencv2.framework */; };
 		C598270C177AA68900C9D576 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C598270B177AA68900C9D576 /* MobileCoreServices.framework */; };
+		C5C212CF177EA3BA000D4E28 /* Image.mm in Sources */ = {isa = PBXBuildFile; fileRef = C5C212CC177EA3BA000D4E28 /* Image.mm */; };
+		C5C212D0177EA3BA000D4E28 /* ImageProcessingAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C212CE177EA3BA000D4E28 /* ImageProcessingAppDelegate.m */; };
 		C5C938E9177AE5C300B1A3C0 /* image_sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5C938E8177AE5C300B1A3C0 /* image_sample.jpg */; };
 		C5C939DF177AEA7B00B1A3C0 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = C5C939DE177AEA7B00B1A3C0 /* tessdata */; };
 		C5D48A03177B77E200460163 /* Tesseract.mm in Sources */ = {isa = PBXBuildFile; fileRef = C5D48993177B77E200460163 /* Tesseract.mm */; };
@@ -74,6 +76,10 @@
 		C59826FF177AA65500C9D576 /* Recipe_ScannerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Recipe_ScannerTests.m; sourceTree = "<group>"; };
 		C5982709177AA67D00C9D576 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		C598270B177AA68900C9D576 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		C5C212CB177EA3BA000D4E28 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		C5C212CC177EA3BA000D4E28 /* Image.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Image.mm; sourceTree = "<group>"; };
+		C5C212CD177EA3BA000D4E28 /* ImageProcessingAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcessingAppDelegate.h; sourceTree = "<group>"; };
+		C5C212CE177EA3BA000D4E28 /* ImageProcessingAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageProcessingAppDelegate.m; sourceTree = "<group>"; };
 		C5C938E8177AE5C300B1A3C0 /* image_sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_sample.jpg; sourceTree = "<group>"; };
 		C5C939DE177AEA7B00B1A3C0 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		C5D48992177B77E200460163 /* Tesseract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tesseract.h; sourceTree = "<group>"; };
@@ -425,6 +431,7 @@
 		C59826D7177AA65500C9D576 /* Recipe Scanner */ = {
 			isa = PBXGroup;
 			children = (
+				C5C212CA177EA3BA000D4E28 /* image_processor */,
 				C5D48A0A177B79A900460163 /* GPUImage */,
 				C5D48990177B77E200460163 /* tesseract-ios */,
 				C5D48996177B77E200460163 /* tesseract-ios-lib */,
@@ -469,6 +476,17 @@
 				C59826FC177AA65500C9D576 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C5C212CA177EA3BA000D4E28 /* image_processor */ = {
+			isa = PBXGroup;
+			children = (
+				C5C212CB177EA3BA000D4E28 /* Image.h */,
+				C5C212CC177EA3BA000D4E28 /* Image.mm */,
+				C5C212CD177EA3BA000D4E28 /* ImageProcessingAppDelegate.h */,
+				C5C212CE177EA3BA000D4E28 /* ImageProcessingAppDelegate.m */,
+			);
+			path = image_processor;
 			sourceTree = "<group>";
 		};
 		C5C938E7177AE5C300B1A3C0 /* assets */ = {
@@ -930,8 +948,10 @@
 			files = (
 				C59826EB177AA65500C9D576 /* ViewController.mm in Sources */,
 				C59826E2177AA65500C9D576 /* AppDelegate.m in Sources */,
+				C5C212CF177EA3BA000D4E28 /* Image.mm in Sources */,
 				C5D48A03177B77E200460163 /* Tesseract.mm in Sources */,
 				C59826DE177AA65500C9D576 /* main.m in Sources */,
+				C5C212D0177EA3BA000D4E28 /* ImageProcessingAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@
 #import "Tesseract.h"
 #import <MobileCoreServices/MobileCoreServices.h>
 #import "GPUImage.h"
+#import "Image.h"
 
 @interface ViewController : UIViewController <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 {
